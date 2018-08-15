@@ -22,8 +22,16 @@ print(regex.match('')) # lower limit -- 0 occurence
 print(regex.match('.jpg'))
 print(regex.match('.....png'))
 
-# + character --- this specifies that the previous character can be matched 1 - infinity time, instead of just once
+# + character --- this specifies that the previous character can be matched 1 - infinity times
 # lower-limit is 1 and upper-limit is infinity
 regex = re.compile('[a-h]+')
 print(regex.match('')) # this will fail to match
 print(regex.match('abdhdcde'))
+
+# ? character --- this specifies that the previous character can be matched 0 to 1 time
+# min ---0 and max --- 1
+
+regex = re.compile('a?b')
+print(regex.match('')) # this will fail to match -- a is 0 and b is 0
+print(regex.match('b')) # Match -- a is 0 and b is 1
+print(regex.match('ab')) # Match -- a is 0 and b is 1
