@@ -21,3 +21,9 @@ regex = re.compile('.*') # match any number of '.' occurences from zero to infin
 print(regex.match('')) # lower limit -- 0 occurence
 print(regex.match('.jpg'))
 print(regex.match('.....png'))
+
+# + character --- this specifies that the previous character can be matched 1 - infinity time, instead of just once
+# lower-limit is 1 and upper-limit is infinity
+regex = re.compile('[a-h]+')
+print(regex.match('')) # this will fail to match
+print(regex.match('abdhdcde'))
