@@ -22,6 +22,9 @@ regex = re.compile('^b') # match all tags that begins with 'b'
 for tag in soup.find_all(regex):
     print(tag.name)
 
+# print('\n')
+# print(soup.find_all(re.compile('\w')))
+
 print('\n')
 # list parameter -- print all tag names present in the list argument
 for tag in soup.find_all(['a','b', 'title', 'script']):
