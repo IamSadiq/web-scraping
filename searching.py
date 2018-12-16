@@ -7,7 +7,7 @@ def readFile(pathToFile):
     file.close()
     return data
 
-soup = BeautifulSoup(readFile('my-pages/simple-page.html'), 'lxml')
+soup = BeautifulSoup(readFile('my-pages/simple-page.html'), 'html.parser')
 
 # print(soup.html.prettify())
 

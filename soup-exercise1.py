@@ -11,6 +11,10 @@ print('status code: ', response.status_code)
 
 # response headers
 headers = response.headers
+print('\nheader count: ', len(headers), '\n')
+
+print('\nheaders: ', headers, '\n')
+
 
 for key, value in headers.items():
     print(key, '   ', value)

@@ -1,7 +1,7 @@
 from xlsxwriter import Workbook
 import xlrd
 
-# make worksheet
+# create workbook
 workbook = Workbook('./worksheets/first-workbook.xlsx')
 
 # add worksheet
